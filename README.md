@@ -36,23 +36,35 @@ bisa juga isi todolist nya "Main Game" lalu ke tambah jadi dua todolist nya
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/tambah%20dua.png)
 
-jika klik selesai pada bagian "makan" maka akan mencoret text nya 
+jika klik selesai pada bagian "makan" maka akan mencoret teks nya 
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/coret%20selesai.png)
 
-jika klik hapus pada bagian
+jika klik hapus pada bagian makan maka akan di tanya "Yakin ingin hapus?"
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/hapus%20todolist.png)
 
+jika yakin maka teks "makan" akan ke hapus
+
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/terhapus.png)
+
+saat masuk sebagai admin
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/admin%20login.png)
 
+maka akan masuk ke daftar todolist yang melihat tugas todolist nya
+
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/table_todolists.png)
+
+jika klik ubah pada user id 2 di tugas "makan" akan memunculkan form ubah data todolist
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/ubah%20tugas.png)
 
+jika klik hapus pada user id 3 di tugas "belajar" akan memunculkan pesan "yakin?"
+
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/hapus%20tugas.png)
+
+jika yakin maka tugas "belajar" akan terhapus
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/data%20berkurang.png)
 
