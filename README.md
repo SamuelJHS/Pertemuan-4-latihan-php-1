@@ -1,1 +1,1 @@
-![image alt([ima](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Gunung.jpg)]
+![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Gunung.jpg)
