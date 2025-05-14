@@ -23,14 +23,14 @@ if( isset($_POST["submit"])) {
         echo "
             <script>
                 alert('data berhasil diubah');
-                document.location.href = 'index.php';
+                document.location.href = 'table_todolist.php';
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('data gagal diubah');
-                document.location.href = 'index.php';
+                document.location.href = 'table_todolist.php';
             </script>
         ";
     }

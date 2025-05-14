@@ -19,7 +19,12 @@ if (isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
 }
 
 if (isset($_SESSION["login"])) {
-    header("Location: index.php");
+    // Cek siapa yang sedang login
+    if (isset($_SESSION["username"]) && strtolower($_SESSION["username"]) === "admin1" || strtolower($_SESSION["username"]) === "admin2" ) {
+        header("Location: table_todolist.php");
+    } else {
+        header("Location: index.php");
+    }
     exit;
 }
 
@@ -53,10 +58,10 @@ if (isset($_POST["login"])) {
                     time() + 60);
             }
 
-            if (strtolower($row["username"]) == "admin") {
-                header("Location: index.php");
+            if (strtolower($row["username"]) == "admin1" || strtolower($row["username"]) == "admin2" ) {
+                header("Location: table_todolist.php");
             } else {
-                header("Location: todolist.php");
+                header("Location: index.php");
             }
             exit;
         }
