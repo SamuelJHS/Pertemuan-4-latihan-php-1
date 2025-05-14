@@ -34,15 +34,9 @@ $todo = query("SELECT * FROM todolist WHERE user_id = $user_id");
 <head>
     <title>To Do List</title>
     <style>
-        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
-        header { background: #4CAF50; color: white; padding: 15px; text-align: center; border-radius: 10px; }
-        img { width: 100px; border-radius: 50%; margin-top: 10px; }
-        .container { background: white; padding: 20px; border-radius: 10px; margin-top: 20px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-        .todo-item { margin-bottom: 10px; padding: 10px; border-bottom: 1px solid #ddd; }
-        .todo-actions a { margin-left: 10px; text-decoration: none; color: blue; }
-        .todo-actions a:hover { text-decoration: underline; }
+        
     </style>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_todolist.css">
 </head>
 <body>
 

@@ -19,7 +19,7 @@ if( isset($_POST["register"]) ) {
 <html>
 <head>
     <title>Halaman Registrasi</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_login_register.css">
 </head>
 <body>
 <h1>Halaman Registrasi</h1>
@@ -33,6 +33,7 @@ if( isset($_POST["register"]) ) {
         <label for="password2">Konfirmasi Password :</label>
         <input type="password" name="password2" id="password2">
         <button type="submit" name="register">Submit</button>
+        <a href="login.php">Sudah punya akun!</a>
     </form>
 </div>
 </form>
