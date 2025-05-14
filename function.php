@@ -12,21 +12,14 @@ function query($query) {
     return $rows;
 }
 
-
-
 function tambah($data) {
     global $conn;
-    // ambil data dari tiap elemen dalam form
-    $nim = htmlspecialchars($data["nim"]);
-    $username = htmlspecialchars($data["username"]);
+    $user_id = $data["user_id"];
     $tugas = htmlspecialchars($data["tugas"]);
-    $status = htmlspecialchars($data["status"]);
+    $status = 0; // default status = belum selesai
 
-    // query insert data
-    $query = "INSERT INTO todolist
-                VALUES
-                ('', '$nim', '$username', '$tugas', '$status')
-                ";
+    $query = "INSERT INTO todolist (user_id, tugas, status) 
+              VALUES ('$user_id', '$tugas', '$status')";
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
@@ -38,30 +31,6 @@ function hapus($id) {
     mysqli_query($conn, "DELETE FROM todolist WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
-
-
-function ubah($data) {
-    global $conn;
-    // ambil data dari tiap elemen dalam form
-    $id = $data["id"];
-    $nim = htmlspecialchars($data["nim"]);
-    $username = htmlspecialchars($data["username"]);
-    $tugas = htmlspecialchars($data["tugas"]);
-    $status = htmlspecialchars($data["status"]);
-
-    // query insert data
-    $query = "UPDATE todolist SET
-                nim = '$nim',
-                username = '$username',
-                tugas = '$tugas',
-                status = '$status'
-            WHERE id = $id
-            ";
-    mysqli_query($conn, $query);
-
-    return mysqli_affected_rows($conn);
-}
-
 
 function registrasi($data) {
     global $conn;
@@ -100,5 +69,23 @@ function registrasi($data) {
 
 }
 
+function aksi_ubah($data) {
+    global $conn;
+    // ambil data dari tiap elemen dalam form
+    $id = $data["id"];
+    $user_id = htmlspecialchars($data["user_id"]);
+    $tugas = htmlspecialchars($data["tugas"]);
+    $status = htmlspecialchars($data["status"]);
 
+    // query insert data
+    $query = "UPDATE todolist SET
+                user_id = '$user_id',
+                tugas = '$tugas',
+                status = '$status'
+            WHERE id = $id
+            ";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
 ?>

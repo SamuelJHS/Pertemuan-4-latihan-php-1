@@ -36,23 +36,31 @@ if( isset($_POST["login"]) ) {
 
         // cek password
         $row = mysqli_fetch_assoc($result);
-        if( password_verify($password, $row["password"]) ) {
-            // set session
-            $_SESSION["login"] = true;  
-
-            // cek remember me
-            if( isset($_POST['remember']) ) { 
-                // buat cookie
-                setcookie('id', $row['id'], time()+60);
-                setcookie('key', hash('sha256', $row['username']),
-                    time()+60);
-            }
-             
+        if($username === "admin") {
+            $_SESSION["login"] = true;
             header("Location: index.php");
             exit;
+        } else {
+            if( password_verify($password, $row["password"]) ) {
+                // set session
+                $_SESSION["login"] = true;
+                $_SESSION["username"] = $row["username"];
+                $_SESSION["user_id"] = $row["id"];
+  
+
+                // cek remember me
+                if( isset($_POST['remember']) ) { 
+                    // buat cookie
+                    setcookie('id', $row['id'], time()+60);
+                    setcookie('key', hash('sha256', $row['username']),
+                        time()+60);
+                }
+             
+                header("Location: todolist.php");
+                exit;
+            }
         }
     }
-
     $error = true;
 }
 
@@ -61,6 +69,7 @@ if( isset($_POST["login"]) ) {
 <html>
 <head>
     <title>Halaman Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -72,26 +81,18 @@ if( isset($_POST["login"]) ) {
 <?php endif; ?>
 <form action="" method="post">
 
-    <ul>
-        <li>
-            <label for="username">Username : </label>
-            <input type="text" name="username" id="username">
-        </li>
-        <li>
-            <label for="password">Password : </label>
-            <input type="password" name="password" id="password">
-        </li>
-        <li>
-            <input type="checkbox" name="remember" id="remember">
-            <label for="remember">Remember me </label>
-        </li>
-        <li>
-            <button type="submit" name="login">Login</button>
-        </li>
+    <div class="login-container">
+    <h1>Login</h1>
+        <label for="username">User Name :</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password">
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Remember me </label>
+        <button type="submit" name="login">Submit</button>
         <a href="Registrasi.php">Registrasi</a>
-    </ul>
-
-</form>
+    </form>
+</div>
 
 </body>
 </html>
