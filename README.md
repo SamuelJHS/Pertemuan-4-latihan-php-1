@@ -16,7 +16,7 @@ jika sudah maka user baru akan ketambah
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/user%20baru.png)
 
-nah masuk baru bisa login
+nah setelah register baru bisa login disini isi username dan password yang baru dibuat
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/terisi%20login.png)
 
@@ -32,9 +32,17 @@ lalu ketambah "makan" pada todolist nya
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/tambah%20todolist.png)
 
+bisa juga isi todolist nya "Main Game" lalu ke tambah jadi dua todolist nya
+
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/tambah%20dua.png)
 
+jika klik selesai pada bagian "makan" maka akan mencoret text nya 
+
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/coret%20selesai.png)
+
+jika klik hapus pada bagian
+
+![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/hapus%20todolist.png)
 
 ![image alt](https://github.com/SamuelJHS/Pertemuan-4-latihan-php-1/blob/main/Todolist/terhapus.png)
 
